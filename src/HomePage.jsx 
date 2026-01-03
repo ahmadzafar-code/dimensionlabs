@@ -1,0 +1,270 @@
+import React, { useState } from 'react';
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-stone-50">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=JetBrains+Mono:wght@400;600&family=Crimson+Text:ital,wght@0,600;0,700;1,400&display=swap');
+        
+        body {
+          font-family: 'Philosopher', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-size: 16px;
+          line-height: 1.7;
+          -webkit-font-smoothing: antialiased;
+        }
+        
+        .mono {
+          font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .serif {
+          font-family: 'Crimson Text', serif;
+        }
+      `}</style>
+
+      {/* Top Navigation */}
+      <nav className="border-b border-black bg-stone-50">
+        <div className="max-w-5xl mx-auto px-16 md:px-24 lg:px-32 py-5">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-8">
+              <span className="text-base font-bold tracking-wider" style={{ color: '#d97706' }}>
+                DIMENSION LABS
+              </span>
+              <a href="/fellowship" className="text-base font-bold hover:opacity-70 transition-opacity">
+                Venture Growth Fellowship 2026
+              </a>
+            </div>
+            <a href="mailto:team@dimensionlabs.org" className="text-base font-bold hover:opacity-70 transition-opacity">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section - Black Background */}
+      <header className="bg-black text-white py-16 md:py-20 px-16 md:px-24 lg:px-32">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="serif text-5xl md:text-6xl lg:text-7xl mb-12 leading-[1.1] font-bold" style={{ color: '#d97706' }}>
+            DIMENSION LABS
+          </h1>
+          
+          <div className="max-w-3xl">
+            <p className="text-2xl md:text-3xl font-bold mb-10 leading-tight">
+              An Initiative by ACube Tech
+            </p>
+            
+            <p className="text-lg md:text-xl font-normal leading-loose mb-8">
+              Dimension Labs is proudly built as an initiative of ACube Tech, a global talent partner 
+              for early-stage startups.
+            </p>
+            
+            <p className="text-lg md:text-xl font-normal leading-loose mb-8">
+              At ACube Tech, our mission is simple but ambitious: to empower startups with exceptional 
+              offshore talent—builders and operators—who help founders scale faster, smarter, and more 
+              affordably.
+            </p>
+            
+            <p className="text-lg md:text-xl font-normal leading-loose">
+              We work with early-stage and growth-stage startups to provide top-tier engineers, designers, 
+              and operators, helping them save up to 70% in costs without compromising on quality, 
+              ownership, or execution.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-16 md:px-24 lg:px-32 py-24">
+        
+        {/* Why ACube Tech Exists Section */}
+        <section className="mb-32">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 tracking-tight uppercase" style={{ color: '#d97706' }}>
+            Why ACube Tech Exists
+          </h2>
+          
+          <p className="text-xl md:text-2xl font-bold mb-10 leading-tight">
+            ACube Tech was born out of lived experience.
+          </p>
+          
+          <div className="space-y-8 text-lg leading-loose mb-12">
+            <p>
+              Like many early-stage founders, we struggled to hire truly great talent—talent that could 
+              build, think, and execute like an owner, without burning through limited runway.
+            </p>
+            
+            <p>
+              At the same time, we saw exceptional talent across South Asia and emerging markets being 
+              overlooked—not due to lack of skill, but lack of access and opportunity.
+            </p>
+            
+            <p className="font-bold">
+              ACube Tech was created to bridge that gap.
+            </p>
+          </div>
+          
+          <div className="bg-white border-2 border-black p-8 md:p-12">
+            <p className="text-xl font-bold mb-8">A platform where:</p>
+            <div className="space-y-5 text-lg leading-loose">
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Startups get A-level talent, not average outsourcing</span>
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Builders and operators get meaningful, long-term opportunities</span>
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Geography no longer limits ambition</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Dashed Divider */}
+        <div className="border-t border-dashed border-gray-400 mb-32"></div>
+
+        {/* Our Impact Section */}
+        <section className="mb-32">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 tracking-tight uppercase" style={{ color: '#d97706' }}>
+            Our Impact So Far
+          </h2>
+          
+          <div className="space-y-8 text-lg leading-loose mb-12">
+            <p>
+              ACube Tech partners primarily with early-stage startups—from pre-seed to Series A—helping 
+              founders build high-performing teams when talent decisions matter most.
+            </p>
+            
+            <p>
+              We work closely with startups across the US and global markets, supporting them with 
+              exceptional offshore builders and operators who integrate deeply into their teams and 
+              execution.
+            </p>
+            
+            <p>
+              Our growing portfolio includes 30+ startups backed by leading accelerators such as Y 
+              Combinator and Techstars, alongside ambitious founder-led companies building 
+              category-defining products.
+            </p>
+          </div>
+          
+          <div className="bg-white border-2 border-black p-8 md:p-12 mb-12">
+            <p className="text-xl font-bold mb-8">By combining world-class talent with cost efficiency, we've enabled startups to:</p>
+            <div className="space-y-5 text-lg leading-loose">
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Build faster with leaner teams</span>
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Extend runway without compromising quality, saving up to 70% cost</span>
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="mono flex-shrink-0">&gt;</span>
+                <span>Scale with ownership-driven builders from day one</span>
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-lg leading-loose mb-8">
+            This impact continues to compound as we support more founders at the earliest—and most 
+            critical—stages of their journey.
+          </p>
+          
+          <p className="text-xl font-bold leading-loose">
+            We continue to grow rapidly with one clear goal: to create lasting impact—on founders, 
+            talent, and the global startup ecosystem.
+          </p>
+        </section>
+
+        {/* Dashed Divider */}
+        <div className="border-t border-dashed border-gray-400 mb-32"></div>
+
+        {/* How Dimension Labs Fits In Section */}
+        <section className="mb-32">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 tracking-tight uppercase" style={{ color: '#d97706' }}>
+            How Dimension Labs Fits In
+          </h2>
+          
+          <div className="space-y-8 text-lg leading-loose mb-12">
+            <p className="text-xl font-bold">
+              Dimension Labs represents our belief that talent + ideas + execution can create entirely 
+              new outcomes.
+            </p>
+            
+            <p>
+              While ACube Tech focuses on enabling startups through world-class teams, Dimension Labs 
+              explores, experiments, and builds—turning insight, technology, and talent into tangible 
+              products and initiatives.
+            </p>
+          </div>
+          
+          <div className="bg-black text-white p-8 md:p-12 mb-12">
+            <p className="text-2xl md:text-3xl serif font-bold leading-tight" style={{ color: '#d97706' }}>
+              Together, they reflect one shared vision:
+            </p>
+            <p className="text-xl md:text-2xl mt-6 leading-relaxed">
+              Building globally. Empowering deeply. Scaling responsibly.
+            </p>
+          </div>
+        </section>
+
+        {/* Dashed Divider */}
+        <div className="border-t border-dashed border-gray-400 mb-32"></div>
+
+        {/* Learn More Section */}
+        <section className="mb-32">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 tracking-tight uppercase" style={{ color: '#d97706' }}>
+            Learn More About ACube Tech
+          </h2>
+          
+          <div className="space-y-8 text-lg leading-loose mb-12">
+            <p>
+              Dimension Labs is built on the foundation of ACube Tech's global talent ecosystem.
+            </p>
+            
+            <p>
+              If you're a founder looking to build a world-class team, or a builder seeking meaningful 
+              opportunities with high-growth startups, you can explore more about our mission, approach, 
+              and work at ACube Tech.
+            </p>
+          </div>
+          
+          <div className="mb-12">
+            <p className="text-xl font-bold mb-6">Visit ACube Tech</p>
+            <a href="https://acube-tech.com" target="_blank" rel="noopener noreferrer">
+              <button className="bg-black text-white px-8 py-4 text-lg font-bold hover:bg-gray-800 transition-all hover:scale-105">
+                acube-tech.com →
+              </button>
+            </a>
+          </div>
+          
+          <p className="text-lg leading-loose text-gray-700">
+            Discover our case studies, learn how we work with early-stage startups, and see how we're 
+            helping founders scale with exceptional global talent.
+          </p>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t-2 border-black mt-32 py-16">
+        <div className="max-w-5xl mx-auto px-16 md:px-24 lg:px-32">
+          <div className="flex justify-between items-center">
+            <div>
+              <p className="font-bold text-base">Dimension Labs</p>
+              <p className="text-sm mt-2 font-normal text-gray-600">An initiative by ACube Tech</p>
+            </div>
+            <div className="flex gap-8 text-sm">
+              <a href="/fellowship" className="hover:underline font-bold">Venture Growth Fellowship</a>
+              <a href="mailto:team@dimensionlabs.org" className="hover:underline font-bold">Contact</a>
+              <a href="https://acube-tech.com" target="_blank" rel="noopener noreferrer" className="hover:underline font-bold">
+                ACube Tech
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
